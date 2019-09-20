@@ -55,6 +55,11 @@ root)
 	quitOnError "Download root-update script"
 	runscript root-update.sh	
 ;;
+tomcat)
+	wget -q $url/tomcat/install-tomcat.sh --no-check-certificate
+	quitOnError "Download install-tomcat script"
+	runscript install-tomcat.sh	
+;;
 apt)
 	wget -q $url/apt/apt-update.sh --no-check-certificate
 	quitOnError "Download apt-update script"
@@ -123,7 +128,7 @@ node)
 	runscript nodejs-install.sh	
 ;;
 *)
-	echo "Usage: installsrv {shell|vim|apt|crapt|nobody|firewall|fwstartup|fail|rootkit|mail|lamp|ftp|node}"
+	echo "Usage: installsrv {shell|vim|apt|tomcat|crapt|nobody|firewall|fwstartup|fail|rootkit|mail|lamp|ftp|node}"
 	exit 1
 esac
 
