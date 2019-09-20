@@ -4,7 +4,7 @@
 # Version: 0.1
 
 # Declartion of global vars
-url="https://raw.github.com/weilex/srvscript/master"
+url="https://raw.github.com/moolsbytheway/srvscript/master"
 txtrst=$(tput sgr0) 	 # Text reset
 txtred=$(tput setaf 1)   # Red
 txtgreen=$(tput setaf 2) # Green
