@@ -10,26 +10,26 @@ txtred=$(tput setaf 1)   # Red
 txtgreen=$(tput setaf 2) # Green
 
 # Install tomcat 8
-TOMCAT_URL="https://www-us.apache.org/dist/tomcat/tomcat-8/v8.5.46/bin/apache-tomcat-8.5.46.zip"
+TOMCAT_URL="https://www-us.apache.org/dist/tomcat/tomcat-8/v8.5.46/bin/apache-tomcat-8.5.46.tar.gz"
 
-function check_java_home {
-    if [ -z ${JAVA_HOME} ]
-    then
-        echo 'Could not find JAVA_HOME. Please install Java and set JAVA_HOME'
-	exit
-    else 
-	echo 'JAVA_HOME found: '$JAVA_HOME
-        if [ ! -e ${JAVA_HOME} ]
-        then
-	    echo 'Invalid JAVA_HOME. Make sure your JAVA_HOME path exists'
-	    exit
-        fi
-    fi
-}
+#function check_java_home {
+ #   if [ -z ${JAVA_HOME} ]
+  #  then
+   #     echo 'Could not find JAVA_HOME. Please install Java and set JAVA_HOME'
+#	exit
+ #   else 
+##	echo 'JAVA_HOME found: '$JAVA_HOME
+  #      if [ ! -e ${JAVA_HOME} ]
+   #     then
+#	    echo 'Invalid JAVA_HOME. Make sure your JAVA_HOME path exists'
+#	    exit
+ #       fi
+  #  fi
+#}
 
 echo 'Installing tomcat server...'
 echo 'Checking for JAVA_HOME...'
-check_java_home
+#check_java_home
 
 echo 'Downloading tomcat-8.0...'
 if [ ! -f /etc/apache-tomcat-8*tar.gz ]
